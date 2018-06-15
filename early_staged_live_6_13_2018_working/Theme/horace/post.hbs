@@ -1,0 +1,95 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- The tag below includes the theme header - partials/header.hbs --}}
+{{> header}}
+
+{{!-- The content area on the single post page --}}
+<div id="content" class="site-content fadeInDown delay_075s">
+	<main id="main" class="site-main outer">
+
+		{{!-- Everything inside the #post tags pulls data from the post --}}
+		{{#post}}
+
+		<article class="{{post_class}} post-full inner">
+
+			<header class="post-header">
+				<div class="post-meta">
+					{{#if featured}}<span class="featured-badge">Featured</span> &sol; {{/if}}<time class="published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time>
+				</div><!-- .post-meta -->
+				<h1 class="post-title">{{title}}</h1>
+			</header><!-- .post-header -->
+
+			{{#if feature_image}}
+			<div class="post-thumbnail"><img src="{{feature_image}}" alt="{{title}}" /></div>
+			{{/if}}
+
+			<div class="post-content">
+				{{content}}
+			</div><!-- .post-content -->
+
+			<footer class="post-footer">
+				{{#if tags}}
+				<p class="post-tags">{{tags separator=" "}}</p>
+				{{/if}}
+				<p class="post-share">
+					<span class="post-share-title">Share:</span>
+					<a target="_blank" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}">Twitter</a>
+					<a target="_blank" href="https://www.facebook.com/sharer.php?u={{url absolute="true"}}">Facebook</a>
+				</p>
+			</footer><!-- .post-footer -->
+
+			{{!-- Everything inside the #author tags pulls data from the author --}}
+			{{#author}}
+			<div class="author-box">
+				{{#if profile_image}}
+				<div class="author-avatar"><img src="{{profile_image}}" alt="{{name}}'s Picture" class="avatar" /></div>
+				{{/if}}
+				<div class="author-details">
+					<h2 class="author-title">About {{name}}</h2>
+					{{#if bio}}
+					<p class="author-description">{{bio}}</p>
+					{{/if}}
+				</div>
+			</div><!-- .author-box -->
+			{{/author}}
+
+			{{!-- The tag below includes the theme comments - partials/comments.hbs --}}
+			{{> comments}}
+
+		</article><!-- .post -->
+
+		{{!-- The tag below includes the newsletter subscription section - partials/newsletter-box.hbs --}}
+		{{> "newsletter-box"}}
+
+		{{!-- Related posts --}}
+		{{#get "posts" filter="tags:[{{tags[*].slug}}]+id:-{{id}}" limit="3" include="tags" as |related_posts|}}
+			{{#foreach related_posts}}
+				{{#if @first}}
+				<section class="read-next inner">
+					<h2 class="read-next-title">Read Next</h2>
+				{{/if}}
+					<article class="{{post_class}}">
+						<header class="post-header">
+							<div class="post-meta">
+								<time class="published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time>
+							</div><!-- .post-meta -->
+							<h3 class="post-title"><a href="{{{url}}}" rel="bookmark">{{title}}</a></h3>
+							{{#if tags}}
+							<p class="post-tags">{{tags separator=" "}}</p>
+							{{/if}}
+						</header><!-- .post-header -->
+						{{#if feature_image}}
+						<a href="{{url}}" class="post-thumbnail"><img src="{{feature_image}}" alt="{{title}}" /></a>
+						{{/if}}
+					</article><!-- .post -->
+				{{#if @last}}
+				</section><!-- .read-next -->
+				{{/if}}
+			{{/foreach}}
+		{{/get}}
+
+		{{/post}}
+
+	</main><!-- .site-main -->
+</div><!-- .site-content -->

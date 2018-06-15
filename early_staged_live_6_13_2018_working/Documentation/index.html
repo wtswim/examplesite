@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Horace | Ghost Theme Documentation</title>
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+</head>
+<body>
+	<div class="wrap">
+		<header class="site-header" role="banner">
+			<h1 class="site-title">Horace - Ghost Theme v1.0.0</h1>
+			<p class="site-description">Theme Documentation</p>
+		</header><!-- .site-header -->
+		<main id="main" class="site-main">
+			<div class="intro">
+				<p>First of all a huge thanks for purchasing this theme! If you have any questions that are not answered here, please feel free to contact us via email (<a href="mailto:justgoodthemes@gmail.com">hello@justgoodthemes.com</a>) or the contact form on our <a href="https://justgoodthemes.com/contact/">contact page</a>. Thanks so much!</p>
+			</div><!-- .intro -->
+			<div id="content" class="site-content">
+				<nav class="table-of-contents">
+					<h2 id="toc">Table of Contents</h2>
+					<ol>
+						<li><a href="#ThemeInfo"><strong>Theme Information</strong></a></li>
+						<li><a href="#ThemeFiles"><strong>Theme File Structure</strong></a></li>
+						<li><a href="#GettingStarted"><strong>How to Upload a Theme to Your Ghost Blog</strong></a>
+							<ol>
+								<li><a href="#GhostAdmin">Upload Through Admin</a></li>
+								<li><a href="#Manually">Upload Manually</a></li>
+							</ol>
+						</li>
+						<li><a href="#ThemeFeatures"><strong>Theme Features</strong></a>
+							<ol>
+								<li><a href="#Favicon">Favicon</a></li>
+								<li><a href="#Navigation">Navigation</a></li>
+								<li><a href="#StaticPages">Static Pages</a></li>
+								<li><a href="#CoverImages">Post Cover Images</a></li>
+								<li><a href="#HeroSection">Hero Section</a></li>
+								<li><a href="#FeaturedPosts">Featured Posts</a></li>
+								<li><a href="#Subscribers">Subscribers</a></li>
+								<li><a href="#SyntaxHighlighter">Syntax Highlighter</a></li>
+								<li><a href="#ImageStyles">Image Styles</a></li>
+								<li><a href="#DisqusComments">Disqus Comments</a></li>
+								<li><a href="#Sidebar">Sidebar</a></li>
+								<li><a href="#SocialMediaLinks">Social Media Links</a></li>
+								<li><a href="#CopyrightInformation">Copyright Information</a></li>
+								<li><a href="#GoogleAnalytics">Google Analytics</a></li>
+							</ol>
+						</li>
+						<li><a href="#Credits"><strong>Credits</strong></a></li>
+						<li><a href="#Support"><strong>Support</strong></a></li>
+						<li><a href="#Updates"><strong>Updates</strong></a></li>
+					</ol>
+					<hr />
+				</nav>
+				<section>
+					<h2 id="ThemeInfo">A. Theme Information</h2>
+					<ul>
+						<li>Name: <strong>Horace</strong></li>
+						<li>Description: A simple single-author <a href="https://ghost.org/">Ghost</a> theme for writers and bloggers.</li>
+						<li>Current Version: 1.0.0</li>
+						<li>Released: 07/02/2018</li>
+						<li>Creator: <a href="https://justgoodthemes.com">JustGoodThemes.com</a></li>
+						<li><a href="https://ghost.org/">Ghost</a> version: 1.20.0</li>
+					</ul>
+					<hr />
+				</section>
+				<section>
+					<h2 id="ThemeFiles">B. Theme Structure</h2>
+					<p>Here's an overview of the theme file structure.</p>
+<pre><code>.
+├── /assets
+	├── /css
+		├── style.css
+	├── /fonts
+		├── fontawesome.eot
+		├── fontawesome.svg
+		├── fontawesome.ttf
+		├── fontawesome.woff
+	├── /images
+	├── /js
+		├── custom.js
+		├── jquery-3.3.1.min.js
+		├── plugins.js
+	├── /sass
+		├── _variables.scss
+		├── style.scss
+	├── screenshot-desktop.jpg
+	├── screenshot-mobile.jpg
+├── /partials
+	├── comments.hbs
+	├── footer.hbs
+	├── header.hbs
+	├── loop-archive.hbs
+	├── loop.hbs
+	├── navigation.hbs
+	├── newsletter-box.hbs
+	├── pagination.hbs
+	├── sidebar.hbs
+	├── social-links.hbs
+	├── widget-about.hbs
+	├── widget-newsletter.hbs
+	├── widget-recent.hbs
+	├── widget-tagcloud.hbs
+├── author.hbs
+├── default.hbs
+├── home.hbs
+├── index.hbs
+├── package.json
+├── page.hbs
+├── post.hbs
+├── tag.hbs</code></pre>
+					<hr />
+				</section>
+				<section>
+					<h2 id="GettingStarted">C. How to Upload a Theme to Your Ghost Blog - <a href="#toc">top</a></h2>
+					<h3 id="GhostAdmin">1. Upload Through Admin</h3>
+					<ol>
+						<li>Log into the admin section of your Ghost blog: <code>yourblog.com/ghost</code>.</li>
+						<li>Click on <strong>Design</strong> under <strong>Settings</strong> in the left hand column and scroll to the very bottom.</li>
+						<li>Click on <strong>Upload a theme</strong>.</li>
+						<li>Drag-and-drop or click and locate the zip file for your theme.</li>
+						<li>Once it is uploaded, click on either <strong>Activate Now</strong> to activate the theme immediately or <strong>Close</strong> if you want to activate later on.</li>
+					</ol>
+					<h3 id="Manually">2. Upload Manually</h3>
+					<ul>
+						<li>Locate the theme directory within the download files. It can be found at <strong>theme/horace</strong>.</li>
+						<li>Login to FTP/SFTP of your blog, or the file browser of your provided hosting service.</li>
+						<li>Navigate to the <strong>/content/themes</strong> directory within your Ghost installation.</li>
+						<li>Upload the <strong>horace</strong> directory found in step one into the remote <strong>/content/themes</strong> directory.</li>
+						<li>Restart your Ghost service. The process for this will change dependent on your provider. If you are unaware how to restart the service please raise a support issue with your host.</li>
+						<li>Log into the admin section of your Ghost blog: <code>yourblog.com/ghost</code>.</li>
+						<li>Click on <strong>Design</strong> under <strong>Settings</strong> in the left hand column and scroll to the very bottom.</li>
+						<li>Click on <strong>Activate</strong> next to the theme you want to activate and it will be activated.</li>
+					</ul>
+					<hr />
+				</section>
+				<section>
+					<h2 id="ThemeFeatures">D. Theme Features - <a href="#toc">top</a></h2>
+					
+					<h3 id="Favicon">1. Favicon</h3>
+					<p>To add a favicon, navigate to <strong>Settings &rarr; General</strong> in your Ghost blog admin dashboard and click <strong>Upload Image</strong> next to <strong>Publication icon</strong>.</p>
+					
+					<h3 id="Navigation">2. Navigation</h3>
+					<p>You can add, edit, delete and reorder menu links on your Ghost blog, directly from the navigation tool within the blog admin area, located at <strong>Settings &rarr; Design</strong>.</p>
+					<p>To add a menu item to your navigation menu, enter a label for the menu item in the label field and the destination for the menu item to link to in the URL field.</p>
+					<p><img src="assets/images/navigation.png" alt="navigation menu"/></p>
+					<p>Once you have organized your menu, click <strong>Save</strong>.</p>
+
+					<h3 id="StaticPages">3. Static Pages</h3>
+					<p>In order to create a static page you create a new post, just like you would any other post. Once you have opened up the new post, open the <strong>Post Settings Menu</strong> by clicking on the gear icon in the top right corner. Check the box to "Turn this post into a page". This will convert your post to a static page.</p>
+					<p><img src="assets/images/static-page.png" alt="static page"/></p>
+
+					<h3 id="CoverImages">4. Post Cover Images</h3>
+					<p>You can add cover images to all of your posts and static pages. Open <strong>Post Settings Menu</strong> by clicking on the gear icon in the top right corner of the Ghost editor, drag and drop or locate the image on your computer, save it and you're all set.</p>
+					<p><img src="assets/images/post-image.png" alt="post cover image"/></p>
+
+					<h3 id="HeroSection">5. Hero Section</h3>
+					<p>The hero section is displayed on the homepage of your blog. By default, the author avatar, welcome title, text and social links are displayed. If the publication cover image is added, it is used as a background for the hero section.</p>
+					<p>To add the publication cover image, navigate to <strong>Settings &rarr; General</strong> and click <strong>Upload Image</strong> next to <strong>Publication cover</strong>.</p>
+					<p>To edit the welcome title and text, open the <strong>home.hbs</strong> file located in the main theme folder <strong>(Ghost/content/themes/horace)</strong> and adjust the markup on lines 25-26.</p>
+					<p>To adjust the social links, follow the guidelines outlined <a href="#SocialMediaLinks">below</a>.</p>
+
+					<h3 id="FeaturedPosts">6. Featured Posts</h3>
+					<p>If you have any posts marked as featured, they will appear on the homepage below the hero section. To mark a post as featured, open the post settings menu by clicking on the gear icon in the top right corner and check the "Feature this post" box.</p>
+					<p><img src="assets/images/featured-post.png" alt="featured post"/></p>
+					<p class="highlight"><strong>Important!</strong> You need to enable Public API to display featured posts. To do this navigate to <strong>Settings &rarr; Labs</strong> in your Ghost admin dashboard and check the "Public API" box.</p>
+
+					<h3 id="Subscribers">7. Subscribers</h3>
+					<p>The Subscribers feature allows you to capture email addresses on your blog, which can then be exported and imported. If the "Subscribers" feature is enabled, the subscription form is displayed below the content and the optional newsletter subscription widget is displayed in the theme sidebar.</p>
+					<p class="highlight"><strong>Important!</strong> You need to enable the Subscribers feature in <strong>Settings &rarr; Labs</strong> in your Ghost admin dashboard by checking the "Subscribers" box.</p>
+
+					<h3 id="SyntaxHighlighter">8. Syntax Highlighter</h3>
+					<p><strong>Horace</strong> comes with the <a href="http://prismjs.com/index.html">Prism</a> syntax highlighter to automatically highlight code blocks in your posts. To make the syntax highlighter work, wrap your code in <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> elements and define the code language by adding a <code>language-xxxx</code> class to the <code>&lt;code&gt;</code> element:</p>
+<pre><code>&lt;pre&gt;&lt;code class="language-css"&gt;p { color: red }&lt;/code&gt;&lt;/pre&gt;</code></pre>
+					<p>By default, the supported languages include: markup, CSS, C-like, JavaScript. If you need to support more languages, visit <a href="http://prismjs.com/download.html">http://prismjs.com/download.html</a>, select the languages you need and download the JS file. Replace the Prism code on lines 9-15 in the <strong>plugins.js</strong> file located in the <strong>assets/js</strong> folder <strong>(Ghost/content/themes/horace/assets/js)</strong> of the theme with the contents of the file you downloaded.</p>
+
+					<h3 id="ImageStyles">9. Image Styles</h3>
+					<p>When adding images to your posts and pages, you can add a #hash value to the end of the source URL to create a more attractive flow of content.</p>
+					<p>For instance, you can align your image left or right, by adding a <code>#left</code> or <code>#right</code> value to the end the end of the source URL like this:</p>
+					<pre><code>![alt text](/content/images/2018/02/image.jpg#left)</code></pre>
+					<pre><code>![alt text](/content/images/2018/02/image.jpg#right)</code></pre>
+					<p>You can also make your image wider than the content by adding a <code>#wide</code> value to the end the end of the source URL like this:</p>
+					<pre><code>![alt text](/content/images/2018/02/image.jpg#wide)</code></pre>
+
+					<h3 id="DisqusComments">10. Disqus Comments</h3>
+					<p><strong>Horace</strong> theme comes with Disqus commenting built-in, you just need to have a <a href="https://disqus.com/">Disqus</a> account. To enable commenting, you need to change the default Disqus account shortname <code>my_disqus_shortname</code> on line 21 in the <strong>comments.hbs</strong> partial located in the <strong>partials</strong> folder <strong>(Ghost/content/themes/horace/partials)</strong> of the theme.</p>
+<pre><code>s.src = 'https://my_disqus_shortname.disqus.com/embed.js';</code></pre>
+					<p>If you wish to disable commenting, just remove the following lines from the <strong>post.hbs</strong> file located in the main theme folder:</p>
+<pre><code>{{!-- The tag below includes the theme comments - partials/comments.hbs --}}
+{{> comments}}</code></pre>
+
+					<h3 id="Sidebar">11. Sidebar</h3>
+					<p>The theme sidebar contains the site navigation menu for small screens and several optional widgets. You can change the order of the widgets or delete unnecessary by editing the <strong>sidebar.hbs</strong> file located in the <strong>partials</strong> folder <strong>(Ghost/content/themes/horace/partials)</strong> of the theme.</p>
+
+					<h4>About Widget</h4>
+					<p>You can edit the About Widget information in the <strong>widget-about.hbs</strong> file located in the <strong>partials</strong> folder <strong>(Ghost/content/themes/horace/partials)</strong> of the theme. If you do not need this widget, simply delete the following lines</p>
+<pre><code>{{!-- Includes the about widget - partials/widget-about.hbs --}}
+{{> "widget-about"}}</code></pre>
+					<p>from the <strong>sidebar.hbs</strong> file located in the <strong>partials</strong> folder <strong>(Ghost/content/themes/horace/partials)</strong> of the theme.</p>
+
+					<h4>Recent Posts Widget</h4>
+					<p>The widget displays 3 latest posts by default, but you can alter the number of posts on line 4 in the <strong>widget-recent.hbs</strong> file located in the <strong>partials</strong> folder <strong>(Ghost/content/themes/horace/partials)</strong> of the theme:</p>
+<pre><code>{{#get "posts" limit="3" as |recent_posts|}}</code></pre>
+					<p>If you do not want to display this widget, simply delete the following lines</p>
+<pre><code>{{!-- Includes the recent posts widget - partials/widget-recent.hbs --}}
+{{> "widget-recent"}}</code></pre>
+					<p>from the <strong>sidebar.hbs</strong> file located in the <strong>partials</strong> folder <strong>(Ghost/content/themes/horace/partials)</strong> of the theme.</p>
+					<p class="highlight"><strong>Important!</strong> You need to enable Public API to display the recent posts widget. To do this navigate to <strong>Settings &rarr; Labs</strong> in your Ghost admin dashboard and check the "Public API" box.</p>
+
+					<h4>Tag Cloud Widget</h4>
+					<p>The widget displays all blog tags ordered by posts number. You can change the order of tags or limit their number on line 5 in the <strong>widget-tagcloud.hbs</strong> file located in the <strong>partials</strong> folder (Ghost/content/themes/horace/partials) of the theme:</p>
+<pre><code>{{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}</code></pre>
+					<p>If you do not want to display this widget, simply delete the following lines</p>
+<pre><code>{{!-- Includes the tagcloud widget - partials/widget-tagcloud.hbs --}}
+{{> "widget-tagcloud"}}</code></pre>
+					<p>from the <strong>sidebar.hbs</strong> file located in the <strong>partials</strong> folder <strong>(Ghost/content/themes/horace/partials)</strong> of the theme.</p>
+					<p class="highlight"><strong>Important!</strong> You need to enable Public API to display the tag cloud widget. To do this navigate to <strong>Settings &rarr; Labs</strong> in your Ghost admin dashboard and check the "Public API" box.</p>
+
+					<h4>Newsletter Widget</h4>
+					<p>If you have enabled the <a href="#Subscribers">"Subscribers"</a> feature in labs, Ghost newsletter subscription widget is displayed in the sidebar.</p>
+					<p>You can edit the Newsletter Widget information in the <strong>widget-newsletter.hbs</strong> file located in the <strong>partials</strong> folder <strong>(Ghost/content/themes/horace/partials)</strong> of the theme. If you do not need this widget, simply delete the following lines</p>
+<pre><code>{{!-- Includes the newsletter widget - partials/widget-newsletter.hbs --}}
+{{> "widget-newsletter"}}</code></pre>
+					<p>from the <strong>sidebar.hbs</strong> file located in the <strong>partials</strong> folder <strong>(Ghost/content/themes/horace/partials)</strong> of the theme.</p>
+
+					<h3 id="SocialMediaLinks">12. Social Media Links</h3>
+					<p>The social media links are displayed in the hero section on the homepage and in the footer of the theme.</p>
+					<p>To add Facebook and Twitter links, navigate to <strong>Settings &rarr; General</strong>, click <strong>Expand</strong> next to <strong>Social accounts</strong> and enter the URLs of your Facebook and Twitter profiles.</p>
+					<p><img src="assets/images/social-links.png" alt="social links"/></p>
+					<p>All other social media links can be altered within the <strong>social-links.hbs</strong> partial located in the <strong>partials</strong> folder <strong>(Ghost/content/themes/horace/partials)</strong> of the theme.</p>
+					<p>You may use any of the following social icons:</p>
+					<div class="row">
+						<div class="one-third"><span class="fa fa-500px"></span> fa-500px</div>
+						<div class="one-third"><span class="fa fa-behance"></span> fa-behance</div>
+						<div class="one-third"><span class="fa fa-codepen"></span> fa-codepen</div>
+					</div>
+					<div class="row">
+						<div class="one-third"><span class="fa fa-dribbble"></span> fa-dribbble</div>
+						<div class="one-third"><span class="fa fa-dropbox"></span> fa-dropbox</div>
+						<div class="one-third"><span class="fa fa-facebook-f"></span> fa-facebook-f</div>
+					</div>
+					<div class="row">
+						<div class="one-third"><span class="fa fa-facebook"></span> fa-facebook</div>
+						<div class="one-third"><span class="fa fa-github"></span> fa-github</div>
+						<div class="one-third"><span class="fa fa-gitlab"></span> fa-gitlab</div>
+					</div>
+					<div class="row">
+						<div class="one-third"><span class="fa fa-google-plus-g"></span> fa-google-plus-g</div>
+						<div class="one-third"><span class="fa fa-google-plus"></span> fa-google-plus</div>
+						<div class="one-third"><span class="fa fa-instagram"></span> fa-instagram</div>
+					</div>
+					<div class="row">
+						<div class="one-third"><span class="fa fa-linkedin-in"></span> fa-linkedin-in</div>
+						<div class="one-third"><span class="fa fa-linkedin"></span> fa-linkedin</div>
+						<div class="one-third"><span class="fa fa-medium-m"></span> fa-medium-m</div>
+					</div>
+					<div class="row">
+						<div class="one-third"><span class="fa fa-medium"></span> fa-medium</div>
+						<div class="one-third"><span class="fa fa-mixcloud"></span> fa-mixcloud</div>
+						<div class="one-third"><span class="fa fa-patreon"></span> fa-patreon</div>
+					</div>
+					<div class="row">
+						<div class="one-third"><span class="fa fa-pinterest-p"></span> fa-pinterest-p</div>
+						<div class="one-third"><span class="fa fa-pinterest"></span> fa-pinterest</div>
+						<div class="one-third"><span class="fa fa-slack-hash"></span> fa-slack-hash</div>
+					</div>
+					<div class="row">
+						<div class="one-third"><span class="fa fa-slack"></span> fa-slack</div>
+						<div class="one-third"><span class="fa fa-soundcloud"></span> fa-soundcloud</div>
+						<div class="one-third"><span class="fa fa-tumblr"></span> fa-tumblr</div>
+					</div>
+					<div class="row">
+						<div class="one-third"><span class="fa fa-twitter"></span> fa-twitter</div>
+						<div class="one-third"><span class="fa fa-vimeo-v"></span> fa-vimeo-v</div>
+						<div class="one-third"><span class="fa fa-vimeo"></span> fa-vimeo</div>
+					</div>
+					<div class="row">
+						<div class="one-third"><span class="fa fa-xing"></span> fa-xing</div>
+						<div class="one-third"><span class="fa fa-youtube"></span> fa-youtube</div>
+						<div class="one-third"><span class="fa fa-envelope"></span> fa-envelope</div>
+					</div>
+					<div class="row">
+						<div class="one-third"><span class="fa fa-paper-plane"></span> fa-paper-plane</div>
+						<div class="one-third"><span class="fa fa-rss"></span> fa-rss</div>
+					</div>
+
+					<h3 id="CopyrightInformation">13. Copyright Information</h3>
+					<p>You can edit the copyright information on line 8 in the <strong>footer.hbs</strong> file within the <strong>partials</strong> folder <strong>(Ghost/content/themes/horace/partials)</strong> of the theme.</p>
+
+					<h3 id="GoogleAnalytics">14. Google Analytics</h3>
+					<p>First, you need to create a Google Account. If you already have one, you should be able to <a href="https://analytics.google.com/analytics/web/">sign into Google Analytics</a> using your existing Google Account credentials.</p>
+					<p>Once you've logged into Google Analytics, follow <a href="https://support.google.com/analytics/answer/1009694?hl=en">their guide</a> to create an account for your blog. Once the account has been created, you'll receive a tracking code. Copy your tracking code and head over to your Ghost blog admin dashboard. Navigate to <strong>Settings &rarr; Code Injection</strong> and paste your tracking code into the Blog Header field.</p>
+					<p>Or you can paste your tracking code inside the <strong>&lt;head&gt;</strong> element in the <strong>default.hbs</strong> file located in the main theme folder, right below the <strong>{{ghost_head}}</strong> and above <strong>&lt;/head&gt;</strong>.</p>
+					<hr />
+				</section>
+				<section>
+					<h2 id="Credits">E. Credits - <a href="#toc">top</a></h2>
+					<ul>
+						<li>Karla font: <a href="https://fonts.google.com/specimen/Karla">https://fonts.google.com/specimen/Karla</a></li>
+						<li>Font Awesome icons: <a href="https://fontawesome.com/"> https://fontawesome.com/</a></li>
+						<li>FitVids plugin: <a href="http://fitvidsjs.com/">http://fitvidsjs.com/</a></li>
+						<li>Prism plugin: <a href="http://prismjs.com/">http://prismjs.com/</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2 id="Support">F. Support - <a href="#toc">top</a></h2>
+					<p>The documentation included provides all the information needed to get the theme installed and customized. However, if you have any questions you can email us at <a href="mailto:hello@justgoodthemes.com">justgoodthemes.com</a>, and we will be happy to help you.</p>
+					<p>If you have any bug reports, or feature requests, please let us know!</p>
+					<hr />
+				</section>
+				<section>
+					<h2 id="Updates">G. Updates - <a href="#toc">top</a></h2>
+					<p>As Ghost platform grows, so will this theme. We’re dedicated to keeping our <strong>Horace</strong> up to date.</p>
+					<hr />
+				</section>
+				<p><a href="#toc">Go To Table of Contents</a></p>
+			</div><!-- #content -->
+		</main><!-- .site-main -->
+		<footer class="site-info">
+			<p>© 2018 Just Good Themes. All rights reserved.</p>
+		</footer><!-- .site-info -->
+	</div><!-- .wrap -->
+</body>
+</html>

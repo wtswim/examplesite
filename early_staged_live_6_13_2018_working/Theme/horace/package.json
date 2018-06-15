@@ -1,0 +1,20 @@
+{
+  "name": "horace",
+  "description": "A simple single-author Ghost theme for writers and bloggers.",
+  "version": "1.0.0",
+  "engines": {
+    "ghost": ">=1.20.0"
+  },
+  "screenshots": {
+    "desktop": "assets/screenshot-desktop.jpg",
+    "mobile": "assets/screenshot-mobile.jpg"
+  },
+  "author": {
+    "name": "Just Good Themes",
+    "email": "hello@justgoodthemes.com",
+    "url": "https://justgoodthemes.com"
+  },
+  "config": {
+    "posts_per_page": 5
+  }
+}
